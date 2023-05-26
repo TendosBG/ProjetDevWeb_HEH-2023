@@ -45,9 +45,23 @@ p{
 /* Header - Navbar */
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 20px 5%;
+    margin-bottom: 50px;
+}
+
+#header-index{
+    justify-content: space-between;
+    animation: none;
+}
+
+.nav-left{
+    animation: navAppearLeft 3s forwards;
+}
+
+.nav-right{
+    animation: navAppearRight 3s forwards;
 }
 
 .sun-small{
@@ -362,6 +376,7 @@ nav a{
     align-items: center;
     padding-top: 2em;
     margin-bottom: 100px;
+    animation: sunAppear 4s forwards;
 }
 
 #tradition-1{
@@ -503,5 +518,23 @@ footer {
     }
     100% {
         transform: translate(0px, 0px);
+    }
+}
+
+@keyframes navAppearLeft{
+    0% {
+        padding-right: 30%;
+    }
+    100% {
+        padding: auto;
+    }
+}
+
+@keyframes navAppearRight{
+    0% {
+        padding-left: 30%;
+    }
+    100% {
+        padding: auto;
     }
 }
