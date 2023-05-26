@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Exo+2&display=swap');
+
+html{
+    height: 100%;
+}
+
+body{
+    /*background-color: #101010;*/
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+p{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+}
+
+.index{
+    overflow: hidden;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.col{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.wrapper{
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Header - Navbar */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.sun-small{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #FE3D28;
+    margin: 10px;
+}
+
+#nav-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nav-title a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item{
+    margin: 0 10px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* Main Page*/
+
+#main{
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    height: 100%;
+}
+
+/* Main Page - Left*/
+
+.left{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Bruno Ace SC', cursive;
+    font-size: 60px;
+    animation: sunAppear 3s forwards;
+}
+
+.sun{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #FE3D28;
+    box-shadow: 0 0 100px #FE3D28;
+    animation: sunAppear 3s forwards;
+}
+
+#main-mid{
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: rgb(255,255,255);
+ }
+
+.kanjis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;    
+    width: 40%;
+    height: 80%;
+    opacity: 0;
+    animation: fadeInBackground 3s forwards;
+    animation-delay: 1.5s;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle closest-side, rgba(254,61,40,0.1) 50%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+    background-size: 175%;
+    background-position: center center;
+}
+
+.kanji{
+    margin: 0;
+    padding-top: 10px;
+}
+
+
+.main-mid-left{
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 10%);  
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.main-mid-left p{
+    opacity: 0;
+    animation: fadeInBackground 3s forwards;
+    animation-delay: 1.5s;
+}
+
+#arrow-link{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInBackground 3s forwards;
+    animation-delay: 1.5s;
+}
+
+#arrow-link a{
+    margin-right: 25%;
+}
+
+#arrow-link p{
+    padding-right: 2%;
+}
+
+/*https://codepen.io/redone-dev/pen/eYKrxoY pour la flèche*/
+.fleche{
+    display: inline-flex;
+    position: relative;
+    width: 60px;
+    height: 20px;
+    z-index: 1;
+    animation: arrowMovement 1.5s forwards;
+    animation-iteration-count: infinite;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+    }
+
+    &:before {
+        border-top: 2px solid black;
+        width: 60px;
+        top: 10px;
+    }
+    &:after {
+        width: 11px;
+        height: 11px;
+        top: 4px;
+        right: 1px;
+    }
+    &.fleche:after {
+        border-top: 2px solid black;
+        border-right: 2px solid black;
+        transform: rotate(45deg);
+        right: 1;
+    }
+}
+
+.cercle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FE3D28;
+    margin-top: 4px;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#main-mid-tori{
+    display: flex;
+    flex-direction: row;
+    align-items: self-end;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+    opacity: 0;
+    animation: fadeInBackground 3s forwards;
+    animation-delay: 1.5s;
+}
+
+#txt-tori{
+    width: 50%;
+}
+
+#txt-tori p{
+    font-size: 14px;
+}
+
+#txt-tori h2{
+    font-size: 20px;
+}
+
+#img-tori{
+    background-image: url("assets/tori.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 60%;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeInBackground 3s forwards;
+    animation-delay: 1.5s;
+    align-self: last baseline;
+    margin-right: 1em;
+}
+
+/* Main Page - Right*/
+
+.right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+}
+
+#main-img{
+    background-image: url('assets/main-bg3.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    z-index: -1;
+    animation-name: fadeInBackground;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#main-images{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#main-images img{
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    transform: translateX(-50px);
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#main-images img:nth-child(3){
+    filter: brightness(2) saturate(2) hue-rotate(10deg);
+}
+
+
+#img1 {
+    animation-delay: 1.5s;
+}
+
+#img2 {
+    animation-delay: 2.5s;
+}
+
+#img3 {
+    animation-delay: 3.5s;
+}
+
+
+
+/* 2eme Page */
+
+/* Section Tradition */
+
+#tradition{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2em;
+    margin-bottom: 100px;
+}
+
+#tradition-1{
+    width: 80%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    border-radius: 15px 15px 0 0;
+    background-color: rgba(244, 139, 128, 0.169);
+}
+
+#txt-tradition-top{
+    width: 50%;
+    height: 100%;
+    padding-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.txt-tradition{
+    background-color: rgba(254, 61, 40, 0.3);;
+    border-radius: 15px;
+    padding: 0 1em;
+}
+
+.half{
+    width: 50%;
+}
+
+.full{
+    width: 93%;
+}
+
+#img-tableau{
+    background-image: url('assets/tableau.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 95%;
+    border-radius: 15px;
+}
+
+#img-kimono{
+    background-image: url('assets/tradition.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+#img-temple-shinto{
+    background-image: url('assets/temple-shinto.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 82%;
+    height: 50%;
+    border-radius: 15px;
+}
+
+#tradition-2{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    padding: 2%;
+    background-color: rgba(244, 139, 128, 0.169);
+}
+
+.full2{
+    width: 80%;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: #f48b802b;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 14px;
+    color: #555;
+}
+
+/*Animations*/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50);
+    }
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+
+@keyframes sunAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes arrowMovement {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(10px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
