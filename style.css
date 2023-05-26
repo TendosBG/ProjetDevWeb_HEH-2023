@@ -461,6 +461,182 @@ nav a{
     width: 80%;
 }
 
+/* Section modernité */
+
+#modernite{
+    width: 100%;
+    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2em;
+    margin-bottom: 100px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+}
+
+
+
+#modernite-top{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    border-radius: 15px;
+    background-color: rgba(254, 61, 40, 0.3);
+    margin-bottom: -10em;
+    animation: fadeInBackground 2s forwards;
+}
+
+#modernite-img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+/* row 1 */
+#img-l1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+}
+
+#img-miyamoto{
+    background-image: url('assets/miyamoto.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sunAppear 4s forwards;
+    animation-delay: 1s;
+}
+
+#img-canal{
+    background-image: url('assets/canal.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+    border-radius: 60%;
+    opacity: 0;
+    animation: sunAppear 4s forwards;
+    animation-delay: 1s;
+}
+
+#img-l2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#img-shibuya{
+    background-image: url('assets/shibuya.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sunAppear 4s forwards;
+    animation-delay: 2s;
+}
+
+#modernite-bottom{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    border-radius: 15px;
+    background-color: rgba(254, 61, 40, 0.3);
+    margin-top: 14em;
+    opacity: 0;
+    animation: fadeInBackground 2s forwards;
+    animation-delay: 5s;
+}
+
+#modernite-img-2{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1em;
+}
+
+.modernite-img-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    background-color: rgba(254, 61, 40, 0.25);
+    border-radius: 15px 15px 0 0;
+    opacity: 0;
+    animation: fadeInBackground 4s forwards;
+    animation-delay: 6s;
+}
+
+.modernite-img-col p{
+    width: 65%;
+}
+
+#img-fax{
+    background-image: url('assets/fax.jpg');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    border-radius: 15px 15px 0 0;
+}
+
+#img-plastique{
+    background-image: url('assets/plastique.jpg');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    border-radius: 15px 15px 0 0;
+}
+
+#img-tatouage{
+    background-image: url('assets/tatouage.jpg');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50%;
+    border-radius: 15px 15px 0 0;
+}
+
 
 
 /* footer */
