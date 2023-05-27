@@ -11,14 +11,15 @@ body{
     height: 100%;
 }
 
+.index{
+    overflow: hidden;
+}
+
 p{
     font-family: 'Exo 2', sans-serif;
     font-size: 20px;
 }
 
-.index{
-    overflow: hidden;
-}
 
 .row{
     display: flex;
@@ -290,7 +291,7 @@ nav a{
     background-position: center center;
     background-repeat: no-repeat;
     width: 240px;
-    height: 60%;
+    height: 150px;
     border-radius: 10px;
     opacity: 0;
     animation: fadeInBackground 3s forwards;
@@ -647,6 +648,175 @@ footer {
     font-size: 14px;
     color: #555;
 }
+
+
+/* CSS Mobile adaptation */
+
+@media only screen and (max-width: 400px){
+    .sun{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 515px){
+    #txt-tori{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1100px){
+
+    .right{
+        visibility: hidden;
+        display: none;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    #header-index{
+        justify-content: space-between;
+    }
+
+    .index{
+        overflow: auto;
+    }
+
+    .wrapper{
+        overflow: auto;
+        height: 100%;
+    }
+
+}
+
+#burger-div{
+    display: none;
+}
+
+.burger-elt{
+    display: none;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+#check{
+    display: none;
+}
+
+#check:checked ~ #burger .elt1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+    transition: transform 0.2s ease-in-out;
+}
+
+#check:checked ~ #burger .elt2 {
+    opacity: 0;
+}
+
+#check:checked ~ #burger .elt3 {
+    transform: rotate(45deg) translate(-9px, -6px);
+    transition: transform 0.2s ease-in-out;
+}
+
+#check:not(:checked) ~ #burger .elt1 {
+    transform: rotate(0deg) translate(0px, 0px);
+    transition: transform 0.2s ease-in-out;
+}
+
+#check:not(:checked) ~ #burger .elt2 {
+    opacity: 1;
+}
+
+#check:not(:checked) ~ #burger .elt3 {
+    transform: rotate(0deg) translate(0px, 0px);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px){
+    .nav-item{
+        font-size: 2.5em;
+    }
+    
+    #check:checked ~ .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-self: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+    
+    .navbar {
+        display: none;
+    }  
+
+    #burger{
+        z-index: 2;
+    }
+
+    
+    .burger-elt{
+        display: block;
+    }
+
+    
+
+    .kanjis{
+        display: none;
+    }
+
+    h1{
+        font-size: 1em;
+    }
+
+    .sun{
+        width: 125px;
+        height: 125px;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    #main-mid{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    #main-mid-left{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #main-mid-tori{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #img-tori{
+        align-self: auto;
+    }
+}
+
+
+
+
+
 
 /*Animations*/
 
