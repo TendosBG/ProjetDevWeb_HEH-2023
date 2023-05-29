@@ -366,6 +366,8 @@ nav a{
 
 /* Section Tradition */
 
+    
+
 #tradition{
     width: 100%;
     display: flex;
@@ -814,9 +816,83 @@ footer {
 }
 
 
+/* Css for the tradition page */
 
 
+@media only screen and (max-width: 1440px) {
+    .full{
+        width: auto;
+    }
 
+    #tradition-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #txt-tradition-top {
+        width: 80%;
+    }
+
+    .txt-tradition {
+        margin-bottom: 1em;
+    }
+
+    #img-tableau {
+        width: 80%;
+        margin-top: 1em;
+    }
+
+    #img-kimono {
+        align-self: flex-start;
+        height: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 1170px) {
+    #img-tableau {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .full{
+        display: none;
+    }
+    
+    #txt-tradition-top {
+        width: 100%;
+    }
+    
+    #img-kimono{
+        width: 30%;
+        height: 50%;
+        align-self: center;
+    }
+
+    #img-temple-shinto {
+        height: 100px;
+    }
+
+    p{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+
+    #img-temple-shinto, #img-kimono {
+        display: none;
+    }
+
+    .txt-tradition {
+        width: 80%;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+}
 
 /*Animations*/
 
